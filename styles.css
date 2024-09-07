@@ -1,0 +1,90 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main-content";
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.branding {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    padding: 10px 0;
+}
+
+.header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #444;
+}
+
+.search-bar {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.user-info {
+    margin-right: 20px;
+}
+
+.buttons button {
+    margin-left: 10px;
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background-color: #555;
+}
+
+.main-content {
+    grid-area: main-content;
+    padding: 20px;
+}
+
+.projects, .announcements, .trending {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+}
